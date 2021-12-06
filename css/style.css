@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Raleway&display=swap");
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.section-outer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 17px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+.btn {
+  padding: 13px 45px;
+  margin: 0;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.2s;
+  letter-spacing: 2.16px;
+}
+.btn--primary {
+  border: 2px solid #505050;
+  color: rgba(0, 0, 0, 0.9);
+}
+.btn--primary:hover {
+  background-color: #505050;
+  color: white;
+}
+
+.section-header {
+  background-color: #eff0f2;
+  height: 800px;
+}
+
+.wrapper-header-content {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 17%;
+}
+.wrapper-header-content .btn {
+  margin-top: 15%;
+}
+
+.logo {
+  padding-top: 6%;
+}
+.logo .logo-wrapper {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  width: 115px;
+  height: 45px;
+  border: 5.5px solid rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1140px) {
+  .logo .logo-wrapper {
+    margin: 0 auto;
+  }
+}
+.logo .logo-wrapper__logo-link {
+  text-decoration: none;
+}
+.logo .logo-wrapper__logo-text {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.9);
+}
+.logo .logo-wrapper__logo-text_letter-o {
+  color: #6df6eb;
+  font-size: 21px;
+  -webkit-text-stroke: 1px #505050;
+}
+
+.header-text {
+  text-align: center;
+  letter-spacing: 1px;
+}
+.header-text-wrapper__text {
+  text-shadow: 3.5px 8.3px 10px rgba(0, 0, 0, 0.24);
+  color: #505050;
+}
+.header-text-wrapper__text-selected {
+  background-color: #6df6eb;
+  padding: 0 15px;
+  margin-right: 5px;
+}
+.header-text-wrapper__text-selected-last {
+  background-color: #6df6eb;
+  padding: 0 0 0 15px;
+  margin-right: 5px;
+}
+@media (max-width: 480px) {
+  .header-text-wrapper__text-selected-last {
+    padding: 0 15px 0 15px;
+  }
+}
+
+.img-header {
+  text-align: right;
+}
+@media (max-width: 1140px) {
+  .img-header {
+    text-align: center;
+    margin-top: 10%;
+  }
+}
+
+.section-about-us {
+  background-color: #f8fafa;
+}
+
+.section-team {
+  background-color: #f9fbfb;
+}
+
+.section-footer {
+  background-color: #262b2e;
+}

@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Raleway&display=swap');
+
+// === Mixin ===
+
+@mixin Merriweather {
+  font-family: 'Merriweather', serif;
+}
+@mixin Montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+@mixin Raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+// === / Mixin ===
+
+// === Variables ===
+
+$fw-regular: 400;
+$fw-bold: 700;
+$fc-primary: rgba(0, 0, 0, 0.9);
+$fc-secondary: #505050;
+$fc-tertiary: rgba(0, 0, 0, 0.62);
+$bc-header: #eff0f2;
+$bc-about-us: #f8fafa;
+$bc-team: #f9fbfb;
+$bc-footer: #262b2e;
+$color_1: #6df6eb;
+$transition: 0.2s;
+
+// === / Variables ===
+
+// === Common ===
+
+body {
+  @include Raleway;
+}
+
+.section-outer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $fw-bold;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  @include Montserrat();
+  font-size: 45px;
+}
+h2 {
+  font-size: 38px;
+}
+h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 17px;
+}
+h6 {
+  font-size: 16px;
+}
+
+.btn {
+  padding: 13px 45px;
+  margin: 0;
+  margin: 0 auto;
+  @include Montserrat();
+  font-weight: $fw-regular;
+  font-size: 18px;
+  text-decoration: none;
+  transition: $transition;
+  letter-spacing: 2.16px;
+  &--primary {
+    border: 2px solid $fc-secondary;
+    color: $fc-primary;
+    &:hover {
+      background-color: $fc-secondary;
+      color: white;
+    }
+  }
+}
+// === Common ===
+
+// === header ===
+.section-header {
+  background-color: $bc-header;
+  height: 800px;
+}
+.wrapper-header-content {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 17%;
+  .btn {
+    margin-top: 15%;
+  }
+}
+.logo {
+  padding-top: 6%;
+  .logo-wrapper {
+    box-sizing: border-box;
+    @include Montserrat;
+    display: flex;
+    width: 115px;
+    height: 45px;
+    border: 5.5px solid $fc-primary;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 1140px) {
+      margin: 0 auto;
+    }
+
+    &__logo-link {
+      text-decoration: none;
+    }
+
+    &__logo-text {
+      font-weight: $fw-bold;
+      color: $fc-primary;
+
+      &_letter-o {
+        color: $color_1;
+        font-size: 21px;
+        -webkit-text-stroke: 1px $fc-secondary;
+      }
+    }
+  }
+}
+
+.header-text {
+  text-align: center;
+  letter-spacing: 1px;
+  &-wrapper {
+    &__text {
+      text-shadow: 3.5px 8.3px 10px rgba(0, 0, 0, 0.24);
+      color: $fc-secondary;
+
+      &-selected {
+        background-color: $color_1;
+        padding: 0 15px;
+        margin-right: 5px;
+        &-last {
+          background-color: $color_1;
+          padding: 0 0 0 15px;
+          margin-right: 5px;
+          @media (max-width: 480px) {
+            padding: 0 15px 0 15px;
+
+          }
+        }
+      }
+    }
+  }
+}
+.img-header {
+  text-align: right;
+  @media (max-width: 1140px) {
+    text-align: center;
+    margin-top: 10%;
+  }
+}
+
+// === / header ===
+
+// === about-us ===
+.section-about-us {
+  background-color: $bc-about-us;
+}
+// === / about-us ===
+
+// === featured-works ===
+.section-featured-works {
+}
+// === / featured-works ===
+
+// === team ===
+.section-team {
+  background-color: $bc-team;
+}
+// === / team ===
+
+// === feedback ===
+.section-feedback {
+}
+// === / feedback ===
+
+// === footer ===
+.section-footer {
+  background-color: $bc-footer;
+}
+// === / footer ===
