@@ -125,6 +125,11 @@ h6 {
     @media (max-width: 1140px) {
       margin: 0 auto;
     }
+    h5 {
+      @include Montserrat();
+      margin: 0;
+      padding: 0;
+    }
 
     &__logo-link {
       text-decoration: none;
