@@ -32,22 +32,42 @@ h1 {
 
 h2 {
   font-size: 38px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(0, 0, 0, 0.9);
+  padding-top: 120px;
+  text-align: center;
 }
 
 h3 {
   font-size: 20px;
+  font-family: "Merriweather", serif;
+  color: #505050;
 }
 
 h4 {
   font-size: 18px;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.62);
+  padding-top: 12px;
+  letter-spacing: 1.4px;
+  text-align: center;
 }
 
 h5 {
   font-size: 17px;
+  font-family: "Merriweather", serif;
+  margin-top: 38px;
+  color: #505050;
 }
 
 h6 {
   font-size: 16px;
+  font-weight: 400;
+  margin-top: 31px;
+  letter-spacing: 0.8px;
+  color: #505050;
+  line-height: 1.8em;
 }
 
 .btn {
@@ -152,6 +172,32 @@ h6 {
 
 .section-about-us {
   background-color: #f8fafa;
+}
+.section-about-us .content-about-us-wrapper {
+  margin-top: 150px;
+  padding-bottom: 165px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.section-about-us .content-about-us-wrapper__image {
+  box-shadow: 0 0 30px 0 rgba(20, 20, 21, 0.13);
+}
+.section-about-us .content-about-us-wrapper__text {
+  width: 45%;
+}
+@media (max-width: 900px) {
+  .section-about-us .content-about-us-wrapper__text {
+    width: 100;
+    margin-top: 20px;
+  }
+}
+.section-about-us .content-about-us-wrapper__text span {
+  display: block;
+  margin-top: 35px;
+}
+.section-about-us .content-about-us-wrapper__text-bottom {
+  margin-top: 27px;
 }
 
 .section-team {
