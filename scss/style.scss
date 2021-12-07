@@ -121,6 +121,8 @@ h6 {
   flex-wrap: wrap;
   justify-content: center;
   margin: 125px 0;
+  row-gap: 0.7rem;
+  column-gap: 0.9rem;
 }
 // === Common ===
 
@@ -237,16 +239,75 @@ h6 {
 
 // === featured-works ===
 .section-featured-works {
-  .content-wrapper {
-    row-gap: 0.7rem;
-    column-gap: 0.9rem;
-  }
 }
 // === / featured-works ===
 
 // === team ===
 .section-team {
   background-color: $bc-team;
+  .content-wrapper {
+    &__item {
+      position: relative;
+      &-dialog {
+        padding-top: 43px;
+        text-align: center;
+        h3 {
+          display: inline;
+          color: $fc-primary;
+        }
+        h5 {
+          margin: 0;
+          display: inline;
+          font-weight: $fw-regular;
+        }
+        h6 {
+          margin-top: 23px;
+          padding: 0 30px;
+          color: $fc-primary;
+          text-align: left;
+          line-height: 1.2rem;
+        }
+        width: 80%;
+        opacity: 0;
+        transition: $transition;
+        background-color: $color_1;
+        position: absolute;
+        bottom: 5%;
+        left: 10%;
+        ul {
+          margin-top: 40px;
+          padding-left: 30px;
+          display: flex;
+          list-style: none;
+          li {
+            margin-right: 20px;
+          }
+        }
+      }
+      &-dialog::before {
+        position: absolute;
+        top: -25px;
+        left: 10%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        width: 0;
+        height: 0;
+        content: '';
+        border-color: transparent;
+        border-width: 10px 15px;
+        transform: 180;
+        border-style: solid;
+        border-left-color: $color_1;
+        transform: rotate(-0.25turn);
+      }
+    }
+    &__item:hover {
+      div {
+        opacity: 1;
+      }
+    }
+  }
 }
 // === / team ===
 
