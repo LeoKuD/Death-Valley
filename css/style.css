@@ -90,6 +90,13 @@ h6 {
   color: white;
 }
 
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 125px 0;
+}
+
 .section-header {
   background-color: #eff0f2;
   height: 800px;
@@ -198,6 +205,11 @@ h6 {
 }
 .section-about-us .content-about-us-wrapper__text-bottom {
   margin-top: 27px;
+}
+
+.section-featured-works .content-wrapper {
+  row-gap: 0.7rem;
+  column-gap: 0.9rem;
 }
 
 .section-team {
