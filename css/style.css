@@ -132,6 +132,11 @@ h6 {
     margin: 0 auto;
   }
 }
+.logo .logo-wrapper h5 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 .logo .logo-wrapper__logo-link {
   text-decoration: none;
 }
