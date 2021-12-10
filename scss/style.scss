@@ -45,6 +45,7 @@ body {
   max-width: 1140px;
   margin: 0 auto;
   height: 100%;
+  overflow: hidden;
 }
 h1,
 h2,
@@ -56,22 +57,32 @@ h6 {
   margin: 0;
   padding: 0;
 }
+
 h1 {
   @include Montserrat();
   font-size: 45px;
+  @media (max-width: 400px) {
+    font-size: 35px;
+  }
 }
+
 h2 {
   font-size: 38px;
   @include Montserrat();
   color: $fc-primary;
   padding-top: 120px;
   text-align: center;
+  @media (max-width: 700px) {
+    padding-top: 60px;
+  }
 }
+
 h3 {
   font-size: 20px;
   @include Merriweather();
   color: $fc-secondary;
 }
+
 h4 {
   font-size: 18px;
   @include Merriweather();
@@ -81,12 +92,14 @@ h4 {
   letter-spacing: 1.4px;
   text-align: center;
 }
+
 h5 {
   font-size: 17px;
   @include Merriweather();
   margin-top: 38px;
   color: $fc-secondary;
 }
+
 h6 {
   font-size: 16px;
   font-weight: $fw-regular;
@@ -101,14 +114,36 @@ h6 {
   margin: 0;
   margin: 0 auto;
   @include Montserrat();
+  color: $fc-primary;
   font-weight: $fw-regular;
   font-size: 18px;
   text-decoration: none;
   transition: $transition;
   letter-spacing: 2.16px;
+  cursor: pointer;
+  border-radius: 2px;
+  @media (max-width: 400px) {
+    padding: 13px 35px;
+  }
+
   &--primary {
     border: 2px solid $fc-secondary;
-    color: $fc-primary;
+
+    &:hover {
+      background-color: $fc-secondary;
+      color: white;
+    }
+  }
+
+  &_secondary {
+    padding: 20px 37px;
+    background-color: $color_1;
+    opacity: 1;
+    margin-left: 0;
+    border: none;
+    margin: 38px 0;
+    margin-right: auto;
+
     &:hover {
       background-color: $fc-secondary;
       color: white;
@@ -121,27 +156,40 @@ h6 {
   flex-wrap: wrap;
   justify-content: center;
   margin: 125px 0;
-  row-gap: 0.7rem;
-  column-gap: 0.9rem;
+  gap: 0.9rem;
+  font-size: 0;
+  @media (max-width: 800px) {
+    margin: 60px 0;
+  }
+}
+
+img {
+  overflow: hidden;
+  @media (max-width: 400px) {
+    width: 95%;
+  }
 }
 // === Common ===
 
 // === header ===
 .section-header {
   background-color: $bc-header;
-  height: 800px;
 }
+
 .wrapper-header-content {
   width: fit-content;
   margin: 0 auto;
   text-align: center;
   margin-top: 17%;
+
   .btn {
     margin-top: 15%;
   }
 }
+
 .logo {
   padding-top: 6%;
+
   .logo-wrapper {
     box-sizing: border-box;
     @include Montserrat;
@@ -151,9 +199,11 @@ h6 {
     border: 5.5px solid $fc-primary;
     justify-content: center;
     align-items: center;
+
     @media (max-width: 1140px) {
       margin: 0 auto;
     }
+
     h5 {
       @include Montserrat();
       margin: 0;
@@ -180,6 +230,7 @@ h6 {
 .header-text {
   text-align: center;
   letter-spacing: 1px;
+
   &-wrapper {
     &__text {
       text-shadow: 3.5px 8.3px 10px rgba(0, 0, 0, 0.24);
@@ -189,6 +240,7 @@ h6 {
         background-color: $color_1;
         padding: 0 15px;
         margin-right: 5px;
+
         &-last {
           background-color: $color_1;
           padding: 0 0 0 15px;
@@ -201,11 +253,21 @@ h6 {
     }
   }
 }
+
 .img-header {
   text-align: right;
+  margin-bottom: 30%;
+
   @media (max-width: 1140px) {
     text-align: center;
     margin-top: 10%;
+  }
+
+  @media (max-width: 800px) {
+    img {
+      width: 75px;
+      height: 85px;
+    }
   }
 }
 
@@ -221,19 +283,29 @@ h6 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
+    @media (max-width: 800px) {
+      margin-top: 60px;
+      padding-bottom: 60px;
+    }
+
     &__image {
       box-shadow: 0 0 30px 0 rgba(20, 20, 21, 0.13);
+      overflow: hidden;
     }
+
     &__text {
       width: 45%;
-      @media (max-width: 900px) {
-        width: 100;
+      @media (max-width: 800px) {
+        width: 390px;
         margin-top: 20px;
       }
+
       span {
         display: block;
         margin-top: 35px;
       }
+
       &-bottom {
         margin-top: 27px;
       }
@@ -244,55 +316,124 @@ h6 {
 
 // === featured-works ===
 .section-featured-works {
+  .section-innerr {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .content-wrapper {
+    &__item {
+      object-fit: cover;
+      transition: $transition linear;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      font-size: 60px;
+      font-weight: bolder;
+      color: #fff;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      width: 370px;
+    }
+
+    @media (max-width: 370px) {
+      img {
+        width: 95%;
+      }
+    }
+  }
 }
 // === / featured-works ===
 
 // === team ===
 .section-team {
   background-color: $bc-team;
+
   .content-wrapper {
     &__item {
       position: relative;
+
       &-dialog {
-        padding-top: 43px;
         text-align: center;
+
+        &__name {
+          margin-top: 35px;
+        }
+
         h3 {
           display: inline;
           color: $fc-primary;
         }
+
         h5 {
           margin: 0;
           display: inline;
           font-weight: $fw-regular;
         }
+
         h6 {
-          margin-top: 23px;
+          margin-top: 20px;
           padding: 0 30px;
           color: $fc-primary;
           text-align: left;
-          line-height: 1.2rem;
+          line-height: 1.4rem;
         }
-        width: 80%;
+
+        width: 90%;
         opacity: 0;
         transition: $transition;
         background-color: $color_1;
         position: absolute;
-        bottom: 5%;
-        left: 10%;
+        bottom: 4%;
+        left: 5%;
+
         ul {
           margin-top: 40px;
           padding-left: 30px;
           display: flex;
           list-style: none;
+          align-items: center;
+
           li {
             margin-right: 20px;
           }
         }
       }
+
+      nav {
+        margin-bottom: 40px;
+      }
+
       &-dialog::before {
         position: absolute;
         top: -25px;
-        left: 10%;
+        left: 7%;
         margin: 0;
         padding: 0;
         display: block;
@@ -301,12 +442,12 @@ h6 {
         content: '';
         border-color: transparent;
         border-width: 10px 15px;
-        transform: 180;
         border-style: solid;
         border-left-color: $color_1;
         transform: rotate(-0.25turn);
       }
     }
+
     &__item:hover {
       div {
         opacity: 1;
@@ -318,11 +459,134 @@ h6 {
 
 // === feedback ===
 .section-feedback {
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(153, 149, 149, 0.4)),
+    url('../img/background.jpg');
+
+  .section-inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 10px;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+
+  &__block {
+    margin: 150px 0 120px 0;
+    background-color: rgba(#021623, 0.5);
+    @media (max-width: 700px) {
+      margin: 0px 0 20px 0;
+    }
+
+    &_left {
+      flex-grow: 1.3;
+    }
+
+    &_right {
+      flex-grow: 1;
+      padding: 20px;
+
+      h5 {
+        @include Raleway();
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: $fw-regular;
+        margin: 6px 10px 0px 5px;
+
+        &:nth-child(5) {
+          margin-top: 32px;
+        }
+
+        &:first-of-type {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
 }
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 20px 20px 0 20px;
+}
+
+form > * {
+  background-color: transparent;
+  font-size: 15px;
+  padding: 20px;
+  font-weight: $fw-regular;
+  border: none;
+  outline: none;
+  resize: none;
+  color: rgba(255, 255, 255, 0.6);
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+iframe {
+  margin-top: 25px;
+  width: 100%;
+  height: 50%;
+}
+
 // === / feedback ===
 
 // === footer ===
 .section-footer {
+  .section-inner {
+    padding-bottom: 135px;
+  }
   background-color: $bc-footer;
+
+  h6 {
+    text-align: center;
+    margin: 0;
+    padding: 85px 0 0 0;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+
+    &__item {
+      transition: $transition;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      width: 45px;
+      height: 40px;
+      background-color: #8d8d8d;
+      margin-right: 10px;
+
+      svg {
+        fill: rgba(255, 255, 255, 0.6);
+      }
+
+      &:hover {
+        background: $color_1;
+
+        svg {
+          fill: $fc-primary;
+        }
+      }
+
+      &:last-child:hover {
+        svg {
+          fill: #000;
+          stroke: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+  }
+
+  ul {
+    padding-left: 0;
+  }
 }
 // === / footer ===
