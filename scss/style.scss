@@ -109,6 +109,12 @@ h6 {
   line-height: 1.8em;
 }
 
+img {
+  // content-visibility: auto;
+  background-size: cover;
+  background-image: url('/img/blurry.svg');
+}
+
 .btn {
   padding: 13px 45px;
   margin: 0;
@@ -157,18 +163,11 @@ h6 {
   justify-content: center;
   margin: 125px 0;
   gap: 0.9rem;
-  font-size: 0;
   @media (max-width: 800px) {
     margin: 60px 0;
   }
 }
 
-img {
-  overflow: hidden;
-  @media (max-width: 400px) {
-    width: 95%;
-  }
-}
 // === Common ===
 
 // === header ===
@@ -262,13 +261,6 @@ img {
     text-align: center;
     margin-top: 10%;
   }
-
-  @media (max-width: 800px) {
-    img {
-      width: 75px;
-      height: 85px;
-    }
-  }
 }
 
 // === / header ===
@@ -288,17 +280,22 @@ img {
       margin-top: 60px;
       padding-bottom: 60px;
     }
-
+    @media (max-width: 400px) {
+      margin: 20px 10px;
+      img {
+        max-width: calc(100% - 20px);
+        height: auto;
+      }
+    }
     &__image {
       box-shadow: 0 0 30px 0 rgba(20, 20, 21, 0.13);
-      overflow: hidden;
     }
 
     &__text {
       width: 45%;
       @media (max-width: 800px) {
         width: 390px;
-        margin-top: 20px;
+        padding: 20px 10px 0px 10px;
       }
 
       span {
@@ -323,11 +320,17 @@ img {
 
   .content-wrapper {
     &__item {
-      object-fit: cover;
       transition: $transition linear;
 
       &:hover {
         transform: scale(1.1);
+      }
+    }
+    @media (max-width: 400px) {
+      img {
+        margin: 0 10px;
+        max-width: calc(100% - 20px);
+        height: auto;
       }
     }
   }
@@ -359,12 +362,12 @@ img {
       left: 50%;
       transform: translate(-50%, -50%);
       object-fit: cover;
-      width: 370px;
     }
 
-    @media (max-width: 370px) {
+    @media (max-width: 400px) {
       img {
-        width: 95%;
+        max-width: calc(100% - 20px);
+        height: auto;
       }
     }
   }
@@ -376,8 +379,18 @@ img {
   background-color: $bc-team;
 
   .content-wrapper {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    @media (max-width: 400px) {
+      img {
+        max-width: calc(100% - 20px);
+      }
+    }
     &__item {
       position: relative;
+      text-align: center;
 
       &-dialog {
         text-align: center;
@@ -405,7 +418,7 @@ img {
           line-height: 1.4rem;
         }
 
-        width: 90%;
+        max-width: 90%;
         opacity: 0;
         transition: $transition;
         background-color: $color_1;
@@ -422,6 +435,12 @@ img {
 
           li {
             margin-right: 20px;
+
+            a:hover {
+              img {
+                transform: scale(1.1);
+              }
+            }
           }
         }
       }
@@ -460,7 +479,7 @@ img {
 // === feedback ===
 .section-feedback {
   background: linear-gradient(rgba(255, 255, 255, 1), rgba(153, 149, 149, 0.4)),
-    url('../img/background.jpg');
+    url('../img/background.webp');
 
   .section-inner {
     display: flex;
@@ -475,8 +494,8 @@ img {
   &__block {
     margin: 150px 0 120px 0;
     background-color: rgba(#021623, 0.5);
-    @media (max-width: 700px) {
-      margin: 0px 0 20px 0;
+    @media (max-width: 1140px) {
+      margin: 0 10px 20px 10px;
     }
 
     &_left {
@@ -510,6 +529,11 @@ form {
   display: flex;
   flex-flow: column wrap;
   margin: 20px 20px 0 20px;
+  @media (max-width: 400px) {
+    & {
+      margin: 5px 5px 0px 5px;
+    }
+  }
 }
 
 form > * {
@@ -518,15 +542,22 @@ form > * {
   padding: 20px;
   font-weight: $fw-regular;
   border: none;
+  border-block-end: 1px solid rgba(255, 255, 255, 0.6);
   outline: none;
   resize: none;
   color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+
+  &:focus {
+    &::placeholder {
+      font-weight: $fw-bold;
+    }
+  }
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
   }
 }
-
 iframe {
   margin-top: 25px;
   width: 100%;

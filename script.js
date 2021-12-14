@@ -1,10 +1,32 @@
 document.querySelectorAll('.gallery img').forEach((image) => {
+  
   image.onclick = () => {
-    console.log(image);
-    document.querySelector('.popup').style.display = 'block';
-    document.querySelector('.popup img').src = image.getAttribute('src');
-  };
-  document.querySelector('.popup span').onclick = () => {
-    document.querySelector('.popup').style.display = 'none';
+    function hide(e) {
+      if (e.target !== img) {
+        popup.style.display = 'none';
+        popup.removeEventListener('click', hide);
+        document.body.style.overflow = 'visible';
+      }
+    }
+    
+    let img = document.querySelector('.popup img');
+    let popup = document.querySelector('.popup');
+    popup.style.display = 'block';
+    let smileImg = image.getAttribute('src');
+    img.src = smileImg;
+    document.body.style.overflow = 'hidden';
+    popup.addEventListener('click', hide);
   };
 });
+
+document.body.addEventListener(
+  "load",
+  (e) => {
+    if (e.target.tagName != "IMG") {
+      return;
+    }
+    // Remove the blurry placeholder.
+    e.target.style.backgroundImage = "none";
+  },
+  /* capture */ true
+);
