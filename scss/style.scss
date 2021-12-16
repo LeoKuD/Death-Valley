@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Raleway&display=swap');
 
-// === Mixin ===
-
 @mixin Merriweather {
   font-family: 'Merriweather', serif;
 }
@@ -11,10 +9,6 @@
 @mixin Raleway {
   font-family: 'Raleway', sans-serif;
 }
-
-// === / Mixin ===
-
-// === Variables ===
 
 $fw-regular: 400;
 $fw-bold: 700;
@@ -26,11 +20,9 @@ $bc-about-us: #f8fafa;
 $bc-team: #f9fbfb;
 $bc-footer: #262b2e;
 $color_1: #6df6eb;
+$color_2: rgba(255, 255, 255, 0.6);
 $transition: 0.2s;
 
-// === / Variables ===
-
-// === Common ===
 html {
   scroll-behavior: smooth;
 }
@@ -64,76 +56,76 @@ h6 {
 h1 {
   @include Montserrat();
   font-size: 2.813rem;
-  @media (max-width: 45em) {
-    font-size: 35px;
-    line-height: 50px;
+  @media (max-width: 45rem) {
+    font-size: 2.188rem;
+    line-height: 3.125rem;
   }
-  @media (max-width: 540px) {
-    font-size: 28px;
-    line-height: 40px;
+  @media (max-width: 33.75em) {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
   }
 }
 
 h2 {
-  font-size: 38px;
+  font-size: 2.375rem;
   @include Montserrat();
   color: $fc-primary;
-  padding-top: 120px;
+  padding-top: 7.5px;
   text-align: center;
   letter-spacing: 2px;
-  @media (max-width: 1140px) {
-    padding-top: 60px;
+  @media (max-width: 71.25em) {
+    padding-top: 3.75rem;
     letter-spacing: 1px;
   }
-  @media (max-width: 760px) {
-    padding-top: 50px;
-    font-size: 32px;
+  @media (max-width: 45em) {
+    padding-top: 3.125rem;
+    font-size: 2rem;
   }
-  @media (max-width: 540px) {
-    padding-top: 40px;
-    font-size: 28px;
+  @media (max-width: 33.75em) {
+    padding-top: 2.5rem;
+    font-size: 1.75rem;
   }
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.25rem;
   @include Merriweather();
   color: $fc-secondary;
   letter-spacing: 1.5px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 1.125rem;
   @include Merriweather();
   font-weight: $fw-regular;
   color: $fc-tertiary;
-  padding-top: 8px;
+  padding-top: 0.5rem;
   letter-spacing: 1.4px;
   text-align: center;
-  @media (max-width: 760px) {
-    font-size: 16px;
+  @media (max-width: 45em) {
+    font-size: 1rem;
   }
-  @media (max-width: 540px) {
-    font-size: 14px;
+  @media (max-width: 33.75em) {
+    font-size: 0.875rem;
     line-height: 1.3rem;
   }
 }
 
 h5 {
-  font-size: 17px;
+  font-size: 1.063rem;
   @include Merriweather();
-  margin-top: 35px;
+  margin-top: 2.188rem;
   color: $fc-secondary;
   letter-spacing: 1.5px;
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: $fw-regular;
-  margin-top: 24px;
+  margin-top: 1.5rem;
   letter-spacing: 0.8px;
   color: $fc-secondary;
-  line-height: 28px;
+  line-height: 1.75rem;
 }
 
 img {
@@ -141,20 +133,20 @@ img {
 }
 
 .btn {
-  padding: 13px 45px;
+  padding: 0.813rem 2.813rem;
   margin: 0;
   margin: 0 auto;
   @include Montserrat();
   color: $fc-primary;
   font-weight: $fw-regular;
-  font-size: 18px;
+  font-size: 1.125rem;
   text-decoration: none;
-  transition: $transition*2;
+  transition: $transition * 2;
   letter-spacing: 2.16px;
   cursor: pointer;
   border-radius: 2px;
-  @media (max-width: 540px) {
-    padding: 13px 35px;
+  @media (max-width: 33.75em) {
+    padding: 0.813rem 2.188rem;
   }
 
   &--primary {
@@ -167,12 +159,12 @@ img {
   }
 
   &_secondary {
-    padding: 20px 37px;
+    padding: 1.25rem 2.313rem;
     background-color: $color_1;
     opacity: 1;
     margin-left: 0;
     border: none;
-    margin: 38px 0;
+    margin: 2.375rem 0;
     margin-right: auto;
 
     &:hover {
@@ -180,8 +172,8 @@ img {
       color: white;
     }
   }
-  @media (max-width: 720px) {
-    margin: 20px 0;
+  @media (max-width: 60rem) {
+    margin: 1.25rem auto;
   }
 }
 
@@ -189,23 +181,19 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 125px 0;
+  margin: 7.813rem 0;
   gap: 0.9rem;
-  @media (max-width: 960px) {
-    margin: 60px 0;
+  @media (max-width: 60em) {
+    margin: 3.75rem 0;
   }
 }
 
-// === Common ===
-
-// === header ===
 .section-header {
   background-color: $bc-header;
   min-height: 100vh;
 }
 
 .wrapper-header-content {
-  width: fit-content;
   margin: 0 auto;
   text-align: center;
   margin-top: 17%;
@@ -222,13 +210,13 @@ img {
     box-sizing: border-box;
     @include Montserrat;
     display: flex;
-    width: 115px;
-    height: 45px;
+    width: 7.188rem;
+    height: 2.813rem;
     border: 5.5px solid $fc-primary;
     justify-content: center;
     align-items: center;
 
-    @media (max-width: 1140px) {
+    @media (max-width: 71.25em) {
       margin: 0 auto;
     }
 
@@ -248,7 +236,7 @@ img {
 
       &_letter-o {
         color: $color_1;
-        font-size: 21px;
+        font-size: 1.313rem;
         -webkit-text-stroke: 1px $fc-secondary;
       }
     }
@@ -260,25 +248,25 @@ img {
   letter-spacing: 1px;
 
   &-wrapper {
-    @media (max-width: 540px) {
-      padding: 0 10px;
+    @media (max-width: 33.75em) {
+      padding: 0 0.625rem;
     }
     &__text {
-      text-shadow: 3.5px 8.3px 10px rgba(0, 0, 0, 0.24);
+      text-shadow: 3.5px 8.3px 0.625rem rgba(0, 0, 0, 0.24);
       color: $fc-secondary;
 
       &-selected {
         background-color: $color_1;
-        padding: 0 15px;
-        @media (max-width: 540px) {
-          padding: 0 10px;
+        padding: 0 0.938rem;
+        @media (max-width: 33.75em) {
+          padding: 0 0.625rem;
         }
         &-last {
           background-color: $color_1;
-          padding: 0 0 0 15px;
-          margin-right: 5px;
-          @media (max-width: 540px) {
-            padding: 0 10px;
+          padding: 0 0 0 0.938rem;
+          margin-right: 0.313rem;
+          @media (max-width: 33.75em) {
+            padding: 0 0.625rem;
           }
         }
       }
@@ -290,47 +278,44 @@ img {
   text-align: right;
   margin-bottom: 30%;
 
-  @media (max-width: 1140px) {
+  @media (max-width: 71.25em) {
     text-align: center;
     margin: 10% 0 10% 0;
   }
 }
 
-// === / header ===
-
-// === about-us ===
 .section-about-us {
   background-color: $bc-about-us;
 
   .content-about-us-wrapper {
-    margin-top: 145px;
-    padding-bottom: 165px;
+    margin-top: 9.063rem;
+    padding-bottom: 10.313rem;
     display: flex;
 
-    @media (max-width: 720px) {
+    @media (max-width: 45rem) {
       flex-direction: column;
     }
 
-    @media (max-width: 1140px) {
-      margin-top: 60px;
-      padding-bottom: 60px;
+    @media (max-width: 71.25em) {
+      margin-top: 3.75rem;
+      padding-bottom: 3.75rem;
     }
     &__image {
       flex: 0 1 50%;
       text-align: center;
-      @media (max-width: 1140px) {
+      @media (max-width: 71.25em) {
       }
-      @media (max-width: 960px) {
-        padding: 0 20px;
+      @media (max-width: 60em) {
+        padding: 0 1.25rem;
       }
-      @media (max-width: 720px) {
+      @media (max-width: 45rem) {
         img {
           max-width: 40%;
           height: auto;
         }
       }
       img {
-        box-shadow: 0 0 30px 0 rgba(20, 20, 21, 0.13);
+        box-shadow: 0 0 1.875rem 0 rgba(20, 20, 21, 0.13);
         max-width: 100%;
         height: auto;
       }
@@ -339,56 +324,54 @@ img {
     &__text {
       flex: 0 1 43%;
       height: auto;
-      margin-left: 45px;
-      @media (max-width: 1140px) {
+      margin-left: 2.813rem;
+      @media (max-width: 71.25em) {
         margin-left: 0px;
       }
-      @media (max-width: 960px) {
+      @media (max-width: 60em) {
         margin-left: 0px;
         flex-basis: 100%;
-        padding: 0 20px;
+        padding: 0 1.25rem;
         h3 {
-          font-size: 18px;
+          font-size: 1.125rem;
         }
         h6 {
-          font-size: 15px;
-          line-height: 24px;
+          font-size: 0.938rem;
+          line-height: 1.5rem;
           letter-spacing: 0.6px;
         }
         h5 {
-          font-size: 15px;
+          font-size: 0.938rem;
         }
       }
-      @media (max-width: 720px) {
-        margin-top: 24px;
+      @media (max-width: 45rem) {
+        margin-top: 1.5rem;
         h3 {
-          font-size: 18px;
+          font-size: 1.125rem;
           text-align: center;
         }
         h6 {
-          font-size: 14px;
-          line-height: 24px;
+          font-size: 0.875rem;
+          line-height: 1.5rem;
           letter-spacing: 0.6px;
         }
         h5 {
-          font-size: 15px;
+          font-size: 0.938rem;
           text-align: center;
         }
       }
       span {
         display: block;
-        margin-top: 25px;
+        margin-top: 1.563rem;
       }
 
       &-bottom {
-        margin-top: 18px;
+        margin-top: 1.125rem;
       }
     }
   }
 }
-// === / about-us ===
 
-// === featured-works ===
 .section-featured-works {
   .section-innerr {
     position: relative;
@@ -404,10 +387,10 @@ img {
         transform: scale(1.05);
       }
     }
-    @media (max-width: 540px) {
+    @media (max-width: 33.75em) {
       img {
-        margin: 0 10px;
-        max-width: calc(100% - 20px);
+        margin: 0 0.625rem;
+        max-width: calc(100% - 1.25rem);
         height: auto;
       }
     }
@@ -418,13 +401,13 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: $fc-primary;
     height: 100%;
     width: 100%;
     z-index: 100;
     &__wrapper {
       position: absolute;
-    z-index: 100;
+      z-index: 100;
 
       top: 50%;
       left: 50%;
@@ -434,28 +417,23 @@ img {
       span {
         position: absolute;
         right: 0;
-        font-size: 60px;
+        font-size: 3.75rem;
         font-weight: bolder;
         color: #fff;
         cursor: pointer;
         z-index: 100;
-        padding-right: 10px;
+        padding-right: 0.625rem;
         top: -15px;
       }
-  
-      img {
-        max-width: calc(100vw - 20px);
-        max-height: calc(100vh - 20px);
 
+      img {
+        max-width: calc(100vw - 1.25rem);
+        max-height: calc(100vh - 1.25rem);
       }
     }
-
-
   }
 }
-// === / featured-works ===
 
-// === team ===
 .section-team {
   background-color: $bc-team;
 
@@ -464,9 +442,9 @@ img {
       max-width: 100%;
       height: auto;
     }
-    @media (max-width: 540px) {
+    @media (max-width: 33.75em) {
       img {
-        max-width: calc(100% - 20px);
+        max-width: calc(100% - 1.25rem);
       }
     }
     &__item {
@@ -477,15 +455,15 @@ img {
         text-align: center;
 
         &__name {
-          margin-top: 30px;
+          margin-top: 1.875rem;
         }
 
         h3 {
           display: inline;
           color: $fc-primary;
-          @media (max-width: 540px) {
+          @media (max-width: 33.75em) {
             h3 {
-              font-size: 18px;
+              font-size: 1.125rem;
             }
           }
         }
@@ -494,24 +472,24 @@ img {
           margin: 0;
           display: inline;
           font-weight: $fw-regular;
-          @media (max-width: 540px) {
-              font-size: 15px;
+          @media (max-width: 33.75em) {
+            font-size: 0.938rem;
           }
         }
 
         h6 {
-          margin-top: 20px;
-          padding: 0 30px;
+          margin-top: 1.25rem;
+          padding: 0 1.875rem;
           color: $fc-primary;
           text-align: left;
           line-height: 1.4rem;
-          @media (max-width: 540px) {
-              font-size: 14px;
+          @media (max-width: 33.75em) {
+            font-size: 0.875rem;
           }
-          @media (max-width: 1140px) {
+          @media (max-width: 71.25em) {
             text-align: justify;
-            padding: 0 15px;
-        }
+            padding: 0 0.938rem;
+          }
         }
 
         max-width: 90%;
@@ -523,8 +501,8 @@ img {
         left: 5%;
 
         ul {
-          margin-top: 40px;
-          padding-left: 30px;
+          margin-top: 2.5rem;
+          padding-left: 1.875rem;
           display: flex;
           list-style: none;
           align-items: center;
@@ -533,23 +511,23 @@ img {
           }
 
           li {
-            margin-right: 20px;
+            margin-right: 1.25rem;
 
             a:hover {
               svg {
-                transition: $transition*2;
+                transition: $transition * 2;
                 transform: scale(1.2);
                 fill: $color_1;
-                stroke: $fc-primary
+                stroke: $fc-primary;
               }
             }
           }
-          @media (max-width: 1140px) {
+          @media (max-width: 71.25em) {
             padding: 0;
             justify-content: center;
           }
-          @media (max-width: 540px) {
-            margin: 10px 0;
+          @media (max-width: 33.75em) {
+            margin: 0.625rem 0;
             padding: 0;
             justify-content: center;
           }
@@ -557,15 +535,15 @@ img {
       }
 
       nav {
-        margin-bottom: 30px;
-        @media (max-width: 540px) {
+        margin-bottom: 1.875rem;
+        @media (max-width: 33.75em) {
           margin-bottom: 0px;
         }
       }
 
       &-dialog::before {
         position: absolute;
-        top: -25px;
+        top: -1.563rem;
         left: 7%;
         margin: 0;
         padding: 0;
@@ -574,7 +552,7 @@ img {
         height: 0;
         content: '';
         border-color: transparent;
-        border-width: 10px 15px;
+        border-width: 0.625rem 0.938rem;
         border-style: solid;
         border-left-color: $color_1;
         transform: rotate(-0.25turn);
@@ -583,15 +561,13 @@ img {
 
     &__item:hover {
       div {
-        transition: $transition*5;
+        transition: $transition * 5;
         opacity: 1;
       }
     }
   }
 }
-// === / team ===
 
-// === feedback ===
 .section-feedback {
   background: linear-gradient(rgba(255, 255, 255, 1), rgba(153, 149, 149, 0.4)),
     url('../img/background.webp');
@@ -600,17 +576,17 @@ img {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 10px;
-    @media (max-width: 720px) {
+    gap: 0.625rem;
+    @media (max-width: 45rem) {
       flex-direction: column;
     }
   }
 
   &__block {
-    margin: 150px 0 120px 0;
+    margin: 9.375rem 0 7.5rem 0;
     background-color: rgba(#021623, 0.5);
-    @media (max-width: 1140px) {
-      margin: 0 10px 20px 10px;
+    @media (max-width: 71.25em) {
+      margin: 0 0.625rem 1.25rem 0.625rem;
     }
 
     &_left {
@@ -619,27 +595,26 @@ img {
 
     &_right {
       flex-grow: 1;
-      padding: 20px;
+      padding: 1.25rem;
       h5 {
         @include Raleway();
-        font-size: 15px;
-        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.938rem;
+        color: $color_2;
         font-weight: $fw-regular;
-        margin: 6px 10px 0px 5px;
-        @media (max-width: 540px) {
-          font-size:14px;
+        margin: 0.375rem 0.625rem 0px 0.313rem;
+        @media (max-width: 33.75em) {
+          font-size: 0.875rem;
         }
 
         &:nth-child(5) {
-          margin-top: 32px;
+          margin-top: 2rem;
         }
       }
       a {
         text-decoration: none;
         &:nth-of-type(3) {
           h5 {
-            margin-top: 15px;
-
+            margin-top: 0.938rem;
           }
         }
         h5 {
@@ -654,24 +629,19 @@ img {
 form {
   display: flex;
   flex-flow: column wrap;
-  margin: 20px 20px 0 20px;
-  @media (max-width: 540px) {
-    & {
-      margin: 5px 20px 0px 20px;
-    }
-  }
+  margin: 1.25rem 1.25rem 1.25rem;
 }
 
 form > * {
   background-color: transparent;
-  font-size: 15px;
-  padding: 20px;
+  font-size: 0.938rem;
+  padding: 1.25rem;
   font-weight: $fw-regular;
   border: none;
-  border-block-end: 1px solid rgba(255, 255, 255, 0.6);
+  border-block-end: 1px solid $color_2;
   outline: none;
   resize: none;
-  color: rgba(255, 255, 255, 0.6);
+  color: $color_2;
   cursor: pointer;
 
   &:focus {
@@ -681,23 +651,20 @@ form > * {
   }
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: $color_2;
   }
 }
 iframe {
-  margin-top: 25px;
+  margin-top: 1.563rem;
   width: 100%;
   height: 50%;
 }
 
-// === / feedback ===
-
-// === footer ===
 .section-footer {
   .section-inner {
-    padding-bottom: 135px;
-    @media (max-width: 960px) {
-      padding-bottom: 35px;
+    padding-bottom: 8.438rem;
+    @media (max-width: 60em) {
+      padding-bottom: 2.188rem;
     }
   }
   background-color: $bc-footer;
@@ -705,9 +672,9 @@ iframe {
   h6 {
     text-align: center;
     margin: 0;
-    padding: 85px 0 0 0;
-    @media (max-width: 960px) {
-      padding: 35px 0 0 0;
+    padding: 5.313rem 0 0 0;
+    @media (max-width: 60em) {
+      padding: 2.188rem 0 0 0;
     }
   }
 
@@ -722,13 +689,13 @@ iframe {
       justify-content: center;
       align-items: center;
       list-style: none;
-      width: 45px;
-      height: 40px;
+      width: 2.813rem;
+      height: 2.5rem;
       background-color: #8d8d8d;
-      margin-right: 10px;
+      margin-right: 0.625rem;
 
       svg {
-        fill: rgba(255, 255, 255, 0.6);
+        fill: $color_2;
       }
 
       &:hover {
@@ -742,7 +709,7 @@ iframe {
       &:last-child:hover {
         svg {
           fill: #000;
-          stroke: rgba(255, 255, 255, 0.6);
+          stroke: $color_2;
         }
       }
     }
@@ -755,4 +722,3 @@ iframe {
     }
   }
 }
-// === / footer ===
