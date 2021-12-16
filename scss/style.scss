@@ -70,7 +70,7 @@ h2 {
   font-size: 2.375rem;
   @include Montserrat();
   color: $fc-primary;
-  padding-top: 7.5px;
+  padding-top: 7.5rem;
   text-align: center;
   letter-spacing: 2px;
   @media (max-width: 71.25em) {
@@ -129,7 +129,9 @@ h6 {
 }
 
 img {
-  content-visibility: auto;
+  // content-visibility: auto;
+  background-size: cover;
+  background-image: url("../img/blurry.svg");
 }
 
 .btn {
@@ -194,6 +196,7 @@ img {
 }
 
 .wrapper-header-content {
+  width: fit-content;
   margin: 0 auto;
   text-align: center;
   margin-top: 17%;
@@ -276,7 +279,6 @@ img {
 
 .img-header {
   text-align: right;
-  margin-bottom: 30%;
 
   @media (max-width: 71.25em) {
     text-align: center;
