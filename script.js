@@ -1,26 +1,25 @@
-document.querySelectorAll('.gallery img').forEach((image) => {
-  image.onclick = () => {
-    function hide(e) {
-      if (e.target !== img) {
-        popup.style.display = 'none';
-        popup.removeEventListener('click', hide);
-        document.body.style.overflow = 'visible';
-      }
-    }
-
+const gallery = document.querySelector('.gallery');
+gallery.addEventListener('click', (event) => {
+  if (event.target.tagName === 'IMG') {
     let img = document.querySelector('.popup img');
     let popup = document.querySelector('.popup');
-    popup.style.display = 'block';
-    let smileImg = image.getAttribute('src');
-    let bigImg = smileImg.slice(0, smileImg.indexOf('.web')) + 'big.webp';
+    let smallImg = event.target.getAttribute('src');
+    let bigImg = smallImg.slice(0, smallImg.indexOf('.web')) + 'big.webp';
     img.src = bigImg;
-    console.log(bigImg);
     document.body.style.overflow = 'hidden';
-    popup.addEventListener('click', hide);
-  };
+    popup.style.display = 'block';
+    popup.addEventListener('click', (event) => {
+      if (event.target.tagName !== 'IMG') {
+        popup.style.display = 'none';
+        document.body.style.overflow = 'visible';
+      }
+    });
+  }
 });
-
-document.querySelector('.form').onsubmit = function submit(e) {
+let form = document.forms.form;
+form.onsubmit = function submit(e) {
   e.preventDefault();
-  document.querySelectorAll('input').forEach((input) => console.log(input.name, ': ', input.value))
+  document
+    .querySelectorAll('input')
+    .forEach((input) => console.log(input.name, ': ', input.value));
 };

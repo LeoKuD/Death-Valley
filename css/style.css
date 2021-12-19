@@ -556,11 +556,17 @@ img {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  gap: 0.625rem;
+  gap: 1.5rem;
 }
 @media (max-width: 45rem) {
   .section-feedback .section-inner {
     flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 71.25em) {
+  .section-feedback .section-inner {
+    gap: 0.5rem;
   }
 }
 .section-feedback__block {
@@ -573,10 +579,10 @@ img {
   }
 }
 .section-feedback__block_left {
-  flex-grow: 1.3;
+  flex: 1 0 40%;
 }
 .section-feedback__block_right {
-  flex-grow: 1;
+  flex: 1 0 25%;
   padding: 1.25rem;
 }
 .section-feedback__block_right h5 {
