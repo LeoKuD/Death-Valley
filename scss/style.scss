@@ -1,15 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Raleway&display=swap');
 
-@mixin Merriweather {
-  font-family: 'Merriweather', serif;
-}
-@mixin Montserrat {
-  font-family: 'Montserrat', sans-serif;
-}
-@mixin Raleway {
-  font-family: 'Raleway', sans-serif;
-}
-
+$ff-Merriweather: 'Merriweather', serif;
+$ff-Montserrat: 'Montserrat', serif;
+$ff-Raleway: 'Raleway', sans-serif;
 $fw-regular: 400;
 $fw-bold: 700;
 $fc-primary: rgba(0, 0, 0, 0.9);
@@ -19,18 +12,24 @@ $bc-header: #eff0f2;
 $bc-about-us: #f8fafa;
 $bc-team: #f9fbfb;
 $bc-footer: #262b2e;
-$color_1: #6df6eb;
-$color_2: rgba(255, 255, 255, 0.6);
+$bc-primary: #8d8d8d;
+$color-primary: #6df6eb;
+$color-secondary: rgba(255, 255, 255, 0.6);
+$hover-color-primary: #fff;
 $transition: 0.2s;
 
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
-  @include Raleway;
+  font-family: $ff-Raleway;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
 .section-outer {
   max-width: 90rem;
   margin: 0 auto;
@@ -54,7 +53,7 @@ h6 {
 }
 
 h1 {
-  @include Montserrat();
+  font-family: $ff-Montserrat;
   font-size: 2.813rem;
   @media (max-width: 45rem) {
     font-size: 2.188rem;
@@ -68,7 +67,7 @@ h1 {
 
 h2 {
   font-size: 2.375rem;
-  @include Montserrat();
+  font-family: $ff-Montserrat;
   color: $fc-primary;
   padding-top: 7.5rem;
   text-align: center;
@@ -89,14 +88,14 @@ h2 {
 
 h3 {
   font-size: 1.25rem;
-  @include Merriweather();
+  font-family: $ff-Merriweather;
   color: $fc-secondary;
   letter-spacing: 1.5px;
 }
 
 h4 {
   font-size: 1.125rem;
-  @include Merriweather();
+  font-family: $ff-Merriweather;
   font-weight: $fw-regular;
   color: $fc-tertiary;
   padding-top: 0.5rem;
@@ -113,7 +112,7 @@ h4 {
 
 h5 {
   font-size: 1.063rem;
-  @include Merriweather();
+  font-family: $ff-Merriweather;
   margin-top: 2.188rem;
   color: $fc-secondary;
   letter-spacing: 1.5px;
@@ -129,7 +128,6 @@ h6 {
 }
 
 img {
-  // content-visibility: auto;
   background-size: cover;
   background-image: url('../img/blurry.svg');
 }
@@ -138,7 +136,7 @@ img {
   padding: 0.813rem 2.813rem;
   margin: 0;
   margin: 0 auto;
-  @include Montserrat();
+  font-family: $ff-Montserrat;
   color: $fc-primary;
   font-weight: $fw-regular;
   font-size: 1.125rem;
@@ -151,18 +149,18 @@ img {
     padding: 0.813rem 2.188rem;
   }
 
-  &--primary {
+  &_primary {
     border: 2px solid $fc-secondary;
 
     &:hover {
       background-color: $fc-secondary;
-      color: white;
+      color: $hover-color-primary;
     }
   }
 
   &_secondary {
     padding: 1.25rem 2.313rem;
-    background-color: $color_1;
+    background-color: $color-primary;
     opacity: 1;
     margin-left: 0;
     border: none;
@@ -177,6 +175,9 @@ img {
   @media (max-width: 60rem) {
     margin: 1.25rem auto;
   }
+}
+.display-block {
+  display: block !important;
 }
 
 .content-wrapper {
@@ -193,10 +194,10 @@ img {
 .section-header {
   background-color: $bc-header;
   min-height: 100vh;
+  padding-top: 6%;
 }
 
 .wrapper-header-content {
-  width: fit-content;
   margin: 0 auto;
   text-align: center;
   margin-top: 17%;
@@ -207,11 +208,9 @@ img {
 }
 
 .logo {
-  padding-top: 6%;
 
   .logo-wrapper {
-    box-sizing: border-box;
-    @include Montserrat;
+    font-family: $ff-Montserrat;
     display: flex;
     width: 7.188rem;
     height: 2.813rem;
@@ -224,7 +223,7 @@ img {
     }
 
     h5 {
-      @include Montserrat();
+      font-family: $ff-Montserrat;
       margin: 0;
       padding: 0;
     }
@@ -237,8 +236,8 @@ img {
       font-weight: $fw-bold;
       color: $fc-primary;
 
-      &_letter-o {
-        color: $color_1;
+      &_big-letter {
+        color: $color-primary;
         font-size: 1.313rem;
         -webkit-text-stroke: 1px $fc-secondary;
       }
@@ -259,13 +258,13 @@ img {
       color: $fc-secondary;
 
       &-selected {
-        background-color: $color_1;
+        background-color: $color-primary;
         padding: 0 0.938rem;
         @media (max-width: 33.75em) {
           padding: 0 0.625rem;
         }
         &-last {
-          background-color: $color_1;
+          background-color: $color-primary;
           padding: 0 0 0 0.938rem;
           margin-right: 0.313rem;
           @media (max-width: 33.75em) {
@@ -290,7 +289,7 @@ img {
 .section-about-us {
   background-color: $bc-about-us;
 
-  .content-about-us-wrapper {
+  .about-us {
     margin-top: 9.063rem;
     padding-bottom: 10.313rem;
     display: flex;
@@ -382,7 +381,7 @@ img {
   }
 
   .content-wrapper {
-    &__item {
+    .team-item {
       transition: $transition linear;
       cursor: pointer;
 
@@ -450,11 +449,11 @@ img {
         max-width: calc(100% - 1.25rem);
       }
     }
-    &__item {
+    .team-item {
       position: relative;
       text-align: center;
 
-      &-dialog {
+      .dialog {
         text-align: center;
 
         &__name {
@@ -498,7 +497,7 @@ img {
         max-width: 90%;
         opacity: 0;
         transition: $transition;
-        background-color: $color_1;
+        background-color: $color-primary;
         position: absolute;
         bottom: 4%;
         left: 5%;
@@ -520,7 +519,7 @@ img {
               svg {
                 transition: $transition * 2;
                 transform: scale(1.2);
-                fill: $color_1;
+                fill: $color-primary;
                 stroke: $fc-primary;
               }
             }
@@ -557,12 +556,12 @@ img {
         border-color: transparent;
         border-width: 0.625rem 0.938rem;
         border-style: solid;
-        border-left-color: $color_1;
+        border-left-color: $color-primary;
         transform: rotate(-0.25turn);
       }
     }
 
-    &__item:hover {
+    .team-item:hover {
       div {
         transition: $transition * 5;
         opacity: 1;
@@ -589,46 +588,45 @@ img {
     }
   }
 
-  &__block {
+  .block-left {
+    flex: 1 0 40%;
+  }
+
+  .block-right {
+    flex: 1 0 25%;
+    padding: 1.25rem;
+    h5 {
+      font-family: $ff-Raleway;
+      font-size: 0.938rem;
+      color: $color-secondary;
+      font-weight: $fw-regular;
+      margin: 0.375rem 0.625rem 0px 0.313rem;
+      @media (max-width: 33.75em) {
+        font-size: 0.875rem;
+      }
+
+      &:nth-child(5) {
+        margin-top: 2rem;
+      }
+    }
+    a {
+      text-decoration: none;
+      &:nth-of-type(3) {
+        h5 {
+          margin-top: 0.938rem;
+        }
+      }
+      h5 {
+        display: inline-block;
+        border-bottom: 1px solid;
+      }
+    }
+  }
+  .feedback-block {
     margin: 9.375rem 0 7.5rem 0;
     background-color: rgba(#021623, 0.5);
     @media (max-width: 71.25em) {
       margin: 0 0.625rem 1.25rem 0.625rem;
-    }
-
-    &_left {
-      flex: 1 0 40%;
-    }
-
-    &_right {
-      flex: 1 0 25%;
-      padding: 1.25rem;
-      h5 {
-        @include Raleway();
-        font-size: 0.938rem;
-        color: $color_2;
-        font-weight: $fw-regular;
-        margin: 0.375rem 0.625rem 0px 0.313rem;
-        @media (max-width: 33.75em) {
-          font-size: 0.875rem;
-        }
-
-        &:nth-child(5) {
-          margin-top: 2rem;
-        }
-      }
-      a {
-        text-decoration: none;
-        &:nth-of-type(3) {
-          h5 {
-            margin-top: 0.938rem;
-          }
-        }
-        h5 {
-          display: inline-block;
-          border-bottom: 1px solid;
-        }
-      }
     }
   }
 }
@@ -645,10 +643,10 @@ form > * {
   padding: 1.25rem;
   font-weight: $fw-regular;
   border: none;
-  border-block-end: 1px solid $color_2;
+  border-block-end: 1px solid $color-secondary;
   outline: none;
   resize: none;
-  color: $color_2;
+  color: $color-secondary;
   cursor: pointer;
 
   &:focus {
@@ -658,7 +656,7 @@ form > * {
   }
 
   &::placeholder {
-    color: $color_2;
+    color: $color-secondary;
   }
 }
 iframe {
@@ -698,15 +696,15 @@ iframe {
       list-style: none;
       width: 2.813rem;
       height: 2.5rem;
-      background-color: #8d8d8d;
+      background-color: $bc-primary;
       margin-right: 0.625rem;
 
       svg {
-        fill: $color_2;
+        fill: $color-secondary;
       }
 
       &:hover {
-        background: $color_1;
+        background: $color-primary;
 
         svg {
           fill: $fc-primary;
@@ -715,8 +713,8 @@ iframe {
 
       &:last-child:hover {
         svg {
-          fill: #000;
-          stroke: $color_2;
+          fill: $hover-color-primary;
+          stroke: $color-secondary;
         }
       }
     }

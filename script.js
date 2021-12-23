@@ -1,25 +1,25 @@
 const gallery = document.querySelector('.gallery');
-gallery.addEventListener('click', (event) => {
-  if (event.target.tagName === 'IMG') {
-    let img = document.querySelector('.popup img');
-    let popup = document.querySelector('.popup');
-    let smallImg = event.target.getAttribute('src');
-    let bigImg = smallImg.slice(0, smallImg.indexOf('.web')) + 'big.webp';
-    img.src = bigImg;
-    document.body.style.overflow = 'hidden';
-    popup.style.display = 'block';
-    popup.addEventListener('click', (event) => {
-      if (event.target.tagName !== 'IMG') {
-        popup.style.display = 'none';
-        document.body.style.overflow = 'visible';
-      }
-    });
+const img = document.querySelector('.popup img');
+const popup = document.querySelector('.popup');
+const body = document.body;
+
+gallery.addEventListener('click', ({target}) => {
+  if (target.tagName === 'IMG') {
+    img.src = target.getAttribute('src');
+    body.classList.add('overflow-hidden');
+    popup.classList.add('display-block');
   }
 });
-let form = document.forms.form;
-form.onsubmit = function submit(e) {
+popup.addEventListener('click', ({target}) => {
+  if (target.tagName !== 'IMG') {
+    popup.classList.remove('display-block')
+    body.classList.remove('overflow-hidden');
+  }
+});
+
+document.forms.form.addEventListener('submit', (e) => {
   e.preventDefault();
   document
     .querySelectorAll('input')
-    .forEach((input) => console.log(input.name, ': ', input.value));
-};
+    .forEach((input) => console.log(`${input.name} : ${input.value}`));
+})

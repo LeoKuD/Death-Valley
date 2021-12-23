@@ -1,12 +1,13 @@
 {
   "name": "death-valley",
   "version": "1.0.0",
-  "description": "",
+  "description": "DEV Incubator Project",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp watch"
   },
-  "author": "",
+  "author": "Evgeniy Moroz (@leokud)",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.27.7",
