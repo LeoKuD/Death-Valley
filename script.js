@@ -6,14 +6,14 @@ const body = document.body;
 gallery.addEventListener('click', ({target}) => {
   if (target.tagName === 'IMG') {
     img.src = target.getAttribute('src');
-    body.classList.add('overflow-hidden');
-    popup.classList.add('display-block');
+    body.classList.add('overflow');
+    popup.classList.add('popup_visible');
   }
 });
 popup.addEventListener('click', ({target}) => {
   if (target.tagName !== 'IMG') {
-    popup.classList.remove('display-block')
-    body.classList.remove('overflow-hidden');
+    popup.classList.remove('popup_visible')
+    body.classList.remove('overflow');
   }
 });
 
