@@ -17,14 +17,14 @@ $color-primary: #6df6eb;
 $color-secondary: rgba(255, 255, 255, 0.6);
 $hover-color-primary: #fff;
 $transition: 0.2s;
-$fs-h1: 2.813rem;
-$fs-h2: 2.375rem;
-$fs-h3: 1.25rem;
-$fs-h4: 1.125rem;
-$fs-h5: 1.063rem;
+$fs-h1: 2.8rem;
+$fs-h2: 2.4rem;
+$fs-h3: 1.3rem;
+$fs-h4: 1.1rem;
+$fs-h5: 1rem;
 $fs-h6: 1rem;
-$fs-small: 0.875rem;
-$fs-large: 1.75rem;
+$fs-small: 0.9rem;
+$fs-large: 1.8rem;
 
 * {
   box-sizing: border-box;
@@ -89,7 +89,7 @@ h4 {
 h5 {
   font-size: $fs-h5;
   font-family: $ff-Merriweather;
-  margin-top: 2.188rem;
+  margin-top: 2.2rem;
   color: $fc-secondary;
   letter-spacing: 1.5px;
 }
@@ -109,7 +109,7 @@ img {
 }
 
 .btn {
-  padding: 0.813rem 2.813rem;
+  padding: 0.8rem 2.8rem;
   margin: 0;
   margin: 0 auto;
   font-family: $ff-Montserrat;
@@ -118,7 +118,7 @@ img {
   font-size: $fs-h4;
   text-decoration: none;
   transition: $transition * 2;
-  letter-spacing: 2.16px;
+  letter-spacing: 2.2px;
   cursor: pointer;
   border-radius: 2px;
 
@@ -132,7 +132,7 @@ img {
   }
 
   &_secondary {
-    padding: 1.25rem 2.313rem;
+    padding: 1.3rem 2.3rem;
     background-color: $color-primary;
     opacity: 1;
     margin-left: 0;
@@ -151,7 +151,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 7.813rem 0;
+  margin: 7.8rem 0;
   gap: 0.9rem;
 }
 
@@ -174,8 +174,8 @@ img {
 .logo {
   font-family: $ff-Montserrat;
   display: flex;
-  width: 7.188rem;
-  height: 2.813rem;
+  width: 7.2rem;
+  height: 2.8rem;
   border: 5.5px solid $fc-primary;
   justify-content: center;
   align-items: center;
@@ -195,7 +195,7 @@ img {
     color: $fc-primary;
     &_big-letter {
       color: $color-primary;
-      font-size: 1.313rem;
+      font-size: 1.3rem;
       -webkit-text-stroke: 1px $fc-secondary;
     }
   }
@@ -207,11 +207,11 @@ img {
 
   &_selected {
     background-color: $color-primary;
-    padding: 0 0.938rem;
+    padding: 0 0.9rem;
     &-last {
       background-color: $color-primary;
-      padding: 0 0 0 0.938rem;
-      margin-right: 0.313rem;
+      padding: 0 0 0 0.9rem;
+      margin-right: 0.3rem;
     }
   }
 }
@@ -225,15 +225,15 @@ img {
   background-color: $bc-about-us;
 
   .about-us {
-    margin-top: 9.063rem;
-    padding-bottom: 10.313rem;
+    margin-top: 9rem;
+    padding-bottom: 10rem;
     display: flex;
 
     &__image {
       flex: 0 1 50%;
       text-align: center;
       img {
-        box-shadow: 0 0 1.875rem 0 rgba(20, 20, 21, 0.13);
+        box-shadow: 0 0 1.9rem 0 rgba(20, 20, 21, 0.13);
         max-width: 100%;
         height: auto;
       }
@@ -242,10 +242,10 @@ img {
     &__text {
       flex: 0 1 43%;
       height: auto;
-      margin-left: 2.813rem;
+      margin-left: 2.8rem;
       span {
         display: block;
-        margin-top: 1.563rem;
+        margin-top: 1.6rem;
       }
 
       &-bottom {
@@ -262,14 +262,15 @@ img {
   }
 
   .content-wrapper {
-    .team-item {
-      transition: $transition linear;
-      cursor: pointer;
-
-      &:hover {
-        transform: scale(1.05);
+      &__work {
+        transition: $transition linear;
+        cursor: pointer;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
       }
-    }
+
   }
 
   .popup {
@@ -298,13 +299,13 @@ img {
         color: #fff;
         cursor: pointer;
         z-index: 100;
-        padding-right: 0.625rem;
+        padding-right: 0.6rem;
         top: -15px;
       }
 
       img {
-        max-width: calc(100vw - 1.25rem);
-        max-height: calc(100vh - 1.25rem);
+        max-width: calc(100vw - 1.2rem);
+        max-height: calc(100vh - 1.2rem);
       }
     }
   }
@@ -321,7 +322,7 @@ img {
       max-width: 100%;
       height: auto;
     }
-    .team-item {
+    .team__item {
       position: relative;
       text-align: center;
 
@@ -329,7 +330,7 @@ img {
         text-align: center;
 
         &__name {
-          margin-top: 1.875rem;
+          margin-top: 1.9rem;
         }
 
         h3 {
@@ -344,8 +345,8 @@ img {
         }
 
         h6 {
-          margin-top: 1.25rem;
-          padding: 0 1.875rem;
+          margin-top: 1.3rem;
+          padding: 0 1.9rem;
           color: $fc-primary;
           text-align: left;
           line-height: 1.4rem;
@@ -361,7 +362,7 @@ img {
 
         ul {
           margin-top: 2.5rem;
-          padding-left: 1.875rem;
+          padding-left: 1.9em;
           display: flex;
           list-style: none;
           align-items: center;
@@ -370,7 +371,7 @@ img {
           }
 
           li {
-            margin-right: 1.25rem;
+            margin-right: 1.3rem;
 
             a:hover {
               svg {
@@ -385,12 +386,12 @@ img {
       }
 
       nav {
-        margin-bottom: 1.875rem;
+        margin-bottom: 1.9rem;
       }
 
       &-dialog::before {
         position: absolute;
-        top: -1.563rem;
+        top: -1.6rem;
         left: 7%;
         margin: 0;
         padding: 0;
@@ -399,14 +400,14 @@ img {
         height: 0;
         content: '';
         border-color: transparent;
-        border-width: 0.625rem 0.938rem;
+        border-width: 0.6rem 0.9rem;
         border-style: solid;
         border-left-color: $color-primary;
         transform: rotate(-0.25turn);
       }
     }
 
-    .team-item:hover {
+    .team__item:hover {
       div {
         transition: $transition * 5;
         opacity: 1;
@@ -426,53 +427,54 @@ img {
     gap: 1.5rem;
   }
 
-  .block-left {
+  .feedback__left {
     flex: 1 0 40%;
+    margin: 9.4rem 0 7.5rem 0;
+    background-color: rgba(#021623, 0.5);
   }
 
-  .block-right {
+  .feedback__right {
     flex: 1 0 25%;
     padding: 1.25rem;
-    h5 {
+    margin: 9.4rem 0 7.5rem 0;
+    background-color: rgba(#021623, 0.5);
+    p {
       font-family: $ff-Raleway;
-      font-size: 0.938rem;
+      font-size: 0.9rem;
       color: $color-secondary;
       font-weight: $fw-regular;
-      margin: 0.375rem 0.625rem 0px 0.313rem;
+      margin: 0.8rem 0.6rem 0px 0.3rem;
 
       &:nth-child(5) {
         margin-top: 2rem;
       }
     }
     a {
+      color: $color-secondary;
       text-decoration: none;
+      border-bottom: 1px solid;
       &:nth-of-type(3) {
-        h5 {
-          margin-top: 0.938rem;
+        p {
+          margin-top: 0.9rem;
         }
       }
-      h5 {
+      p {
         display: inline-block;
-        border-bottom: 1px solid;
       }
     }
-  }
-  .feedback-block {
-    margin: 9.375rem 0 7.5rem 0;
-    background-color: rgba(#021623, 0.5);
   }
 }
 
 form {
   display: flex;
   flex-flow: column wrap;
-  margin: 1.25rem 1.25rem 1.25rem;
+  margin: 1.3rem 1.3rem 1.3rem;
 }
 
 form > * {
   background-color: transparent;
-  font-size: 0.938rem;
-  padding: 1.25rem;
+  font-size: 0.9rem;
+  padding: 1.3rem;
   font-weight: $fw-regular;
   border: none;
   border-block-end: 1px solid $color-secondary;
@@ -492,21 +494,21 @@ form > * {
   }
 }
 iframe {
-  margin-top: 1.563rem;
+  margin-top: 1.6rem;
   width: 100%;
   height: 50%;
 }
 
-.footer {
+footer {
   .inner {
-    padding-bottom: 8.438rem;
+    padding-bottom: 8.4rem;
   }
   background-color: $bc-footer;
 
   h6 {
     text-align: center;
     margin: 0;
-    padding: 5.313rem 0 0 0;
+    padding: 5.3rem 0 0 0;
   }
 
   .social {
@@ -520,10 +522,10 @@ iframe {
       justify-content: center;
       align-items: center;
       list-style: none;
-      width: 2.813rem;
+      width: 2.8rem;
       height: 2.5rem;
       background-color: $bc-primary;
-      margin-right: 0.625rem;
+      margin-right: 0.6rem;
 
       svg {
         fill: $color-secondary;
@@ -556,7 +558,7 @@ iframe {
 
 @media (max-width: 71.25em) {
   h2 {
-    padding-top: 3.75rem;
+    padding-top: 3.8rem;
     letter-spacing: 1px;
   }
   .logo {
@@ -568,8 +570,8 @@ iframe {
   }
   .about-us {
     .about-us {
-      margin-top: 3.75rem;
-      padding-bottom: 3.75rem;
+      margin-top: 3.8rem;
+      padding-bottom: 3.8rem;
       &__text {
         margin-left: 0px;
       }
@@ -579,7 +581,7 @@ iframe {
     .content-wrapper {
       h6 {
         text-align: justify;
-        padding: 0 0.938rem;
+        padding: 0 0.9rem;
       }
       ul {
         padding: 0;
@@ -591,61 +593,60 @@ iframe {
   .feedback {
     .inner {
       gap: 0.5rem;
-    }
-    .feedback-block {
-      margin: 0 0.625rem 1.25rem 0.625rem;
+      margin: 0 0.6rem 0 0.6rem;
+
     }
   }
 }
 
 @media (max-width: 60em) {
   .btn {
-    margin: 1.25rem auto;
+    margin: 1.3rem auto;
   }
   .content-wrapper {
-    margin: 3.75rem 0;
+    margin: 3.8rem 0;
   }
   .about-us {
     .about-us {
       &__image {
-        padding: 0 1.25rem;
+        padding: 0 1.3rem;
       }
       &__text {
         margin-left: 0px;
         flex-basis: 100%;
-        padding: 0 1.25rem;
+        padding: 0 1.3rem;
         h3 {
           font-size: $fs-h4;
         }
         h6 {
-          font-size: 0.938rem;
+          font-size: 0.9rem;
           line-height: 1.5rem;
           letter-spacing: 0.6px;
         }
         h5 {
-          font-size: 0.938rem;
+          font-size: 0.9rem;
         }
       }
     }
   }
 
-  .footer {
+  footer {
     .inner {
-      padding-bottom: 2.188rem;
+      padding-bottom: 2.2rem;
     }
     h6 {
-      padding: 2.188rem 0 0 0;
+      padding: 2.2rem 0 0 0;
     }
   }
 }
 
 @media (max-width: 45em) {
   h1 {
-    font-size: 2.188rem;
-    line-height: 3.125rem;
+    font-size: 2.2rem;
+    line-height: 3.1rem;
   }
   h2 {
-    padding-top: 3.125rem;
+    padding-top: 3.1rem;
     font-size: 2rem;
   }
   h4 {
@@ -676,7 +677,7 @@ iframe {
           letter-spacing: 0.6px;
         }
         h5 {
-          font-size: 0.938rem;
+          font-size: 0.9rem;
           text-align: center;
         }
       }
@@ -687,6 +688,12 @@ iframe {
     .inner {
       flex-direction: column;
       gap: 0.5rem;
+    }
+    .feedback__left {
+      margin: 1rem 0 1rem 0;
+    }
+    .feedback__right {
+      margin: 1rem 0 1rem 0;
     }
   }
 }
@@ -705,12 +712,12 @@ iframe {
     line-height: 1.3rem;
   }
   .header-content__btn-contacts {
-    padding: 0.813rem 2.188rem;
+    padding: 0.8rem 2.2rem;
     margin-top: 4rem;
   }
 
   .header-content__text {
-    padding: 0 0.625rem;
+    padding: 0 0.6rem;
   }
   .header-content {
     margin-top: 4rem;
@@ -718,8 +725,8 @@ iframe {
 
   .content-wrapper {
     img {
-      margin: 0 0.625rem;
-      max-width: calc(100% - 1.25rem);
+      margin: 0 0.6rem;
+      max-width: calc(100% - 1.3rem);
       height: auto;
     }
   }
@@ -727,19 +734,19 @@ iframe {
   .team {
     .content-wrapper {
       img {
-        max-width: calc(100% - 1.25rem);
+        max-width: calc(100% - 1.3rem);
       }
       h3 {
         font-size: $fs-h4;
       }
       h5 {
-        font-size: 0.938rem;
+        font-size: 0.9rem;
       }
       h6 {
         font-size: $fs-small;
       }
       ul {
-        margin: 0.625rem 0;
+        margin: 0.6rem 0;
         padding: 0;
         justify-content: center;
       }
@@ -750,7 +757,7 @@ iframe {
   }
 
   .feedback {
-    .block-right {
+    .feedback__right {
       h5 {
         font-size: $fs-small;
       }

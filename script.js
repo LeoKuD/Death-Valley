@@ -1,4 +1,4 @@
-const gallery = document.querySelector('.gallery');
+const gallery = document.getElementById('gallery');
 const img = document.querySelector('.popup img');
 const popup = document.querySelector('.popup');
 const body = document.body;

@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./img/favicon.ico"image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="scss/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Death Vallye Part 1</title>
+    <title>Creation of a design to order</title>
   </head>
   <body>
     <header class="header">
@@ -37,8 +37,6 @@
           </div>
           <div class="img-header">
             <img
-              width="75px"
-              height="85px"
               class="img-header__img"
               src="img/header-img.webp"
               alt="header"
@@ -55,12 +53,7 @@
           <h4>LOREM IPSUM DOLOR SIT AMET EVENT LANDING TEMPLATE</h4>
           <div class="about-us">
             <div class="about-us__image">
-              <img
-                width="392px"
-                height="483px"
-                src="img/about-us.webp"
-                alt="about-us"
-              />
+              <img src="img/about-us.webp" alt="about-us" />
             </div>
 
             <div class="about-us__text">
@@ -91,12 +84,12 @@
         <div class="inner">
           <h2>FEATURED WORKS</h2>
           <h4>LOREM IPSUM DOLOR SIT AMET EVENT LANDING TEMPLATE</h4>
-          <div class="content-wrapper gallery">
+          <div class="content-wrapper" id="gallery">
             <img
               loading="lazy"
               width="370px"
               height="359px"
-              class="team-item"
+              class="content-wrapper__work"
               src="img/work-1.webp"
               alt="design project - ice cream"
             />
@@ -104,7 +97,7 @@
               loading="lazy"
               width="370px"
               height="359px"
-              class="team-item"
+              class="content-wrapper__work"
               src="img/work-2.webp"
               alt="design project - business card"
             />
@@ -112,7 +105,7 @@
               loading="lazy"
               width="370px"
               height="359px"
-              class="team-item"
+              class="content-wrapper__work"
               src="img/work-3.webp"
               alt="design project - bottle logo"
             />
@@ -120,7 +113,7 @@
               loading="lazy"
               width="370px"
               height="359px"
-              class="team-item"
+              class="content-wrapper__work"
               src="img/work-4.webp"
               alt="design project - notebook"
             />
@@ -128,7 +121,7 @@
               loading="lazy"
               width="370px"
               height="359px"
-              class="team-item"
+              class="content-wrapper__work"
               src="img/work-5.webp"
               alt="design project - birthday"
             />
@@ -136,7 +129,7 @@
               loading="lazy"
               width="370px"
               height="359px"
-              class="team-item"
+              class="content-wrapper__work"
               src="img/work-6.webp"
               alt="design project - package"
             />
@@ -154,7 +147,7 @@
           <h2>SMALL TEAM</h2>
           <h4>LOREM IPSUM DOLOR SIT AMET EVENT LANDING TEMPLATE</h4>
           <div class="content-wrapper">
-            <div class="team-item">
+            <div class="team__item">
               <img
                 loading="lazy"
                 width="370px"
@@ -349,7 +342,7 @@
                 </nav>
               </div>
             </div>
-            <div class="team-item">
+            <div class="team__item">
               <img
                 loading="lazy"
                 width="370px"
@@ -544,7 +537,7 @@
                 </nav>
               </div>
             </div>
-            <div class="team-item">
+            <div class="team__item">
               <img
                 loading="lazy"
                 width="370px"
@@ -739,7 +732,7 @@
                 </nav>
               </div>
             </div>
-            <div loading="lazy" class="team-item">
+            <div loading="lazy" class="team__item">
               <img
                 width="370px"
                 height="440px"
@@ -933,7 +926,7 @@
                 </nav>
               </div>
             </div>
-            <div loading="lazy" class="team-item">
+            <div loading="lazy" class="team__item">
               <img
                 width="370px"
                 height="440px"
@@ -1127,7 +1120,7 @@
                 </nav>
               </div>
             </div>
-            <div class="team-item">
+            <div class="team__item">
               <img
                 loading="lazy"
                 width="370px"
@@ -1327,7 +1320,7 @@
       </section>
       <section class="feedback">
         <div id="feedback" class="inner">
-          <div class="feedback-block block-left">
+          <div class="feedback__left">
             <form class="form" action="#" name="form">
               <input name="name" type="text" placeholder="Name*" required />
               <input
@@ -1348,21 +1341,18 @@
               <button class="btn btn_secondary">SEND MESSAGE</button>
             </form>
           </div>
-          <div class="feedback-block block-right">
-            <h5>Adress line 1</h5>
-            <h5>Adress line 2</h5>
-            <a href="tel: +548945645"><h5>Phone: +548 945645</h5></a>
-            <br />
-            <a href="tel: +45645654546"><h5>Fax: +456456 54546</h5></a>
-            <br />
+          <div class="feedback__right">
+            <p>Adress line 1</p>
+            <p>Adress line 2</p>
+            <p><a href="tel: +548945645">Phone: +548 945645</a></p>
+            <p><a href="tel: +45645654546">Fax: +456456 54546</a></p>
 
-            <a href="www.designagency.net"
-              ><h5>Web: www.designagency.net</h5></a
-            >
-            <br />
-            <a href="mailto:info@designagency.net"
-              ><h5>E-mail: info@designagency.net</h5></a
-            >
+            <p><a href="www.designagency.net">Web: www.designagency.net</a></p>
+            <p>
+              <a href="mailto:info@designagency.net"
+                >E-mail: info@designagency.net</a
+              >
+            </p>
 
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2350.7184142383785!2d27.54037631575252!3d53.90120868009905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfeefced3625%3A0xbba2699d3727a191!2z0YPQuy4g0KjQvtGA0L3QsNGPIDE4LCDQnNC40L3RgdC6!5e0!3m2!1sru!2sby!4v1639040241999!5m2!1sru!2sby"
@@ -1375,7 +1365,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer>
       <div class="inner">
         <h6>FOLLOW US</h6>
         <ul class="social">
